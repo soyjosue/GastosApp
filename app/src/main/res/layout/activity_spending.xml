@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".spending"
+    android:background="@drawable/bg_color">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:text="@string/principal_title"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textAlignment="center" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:background="@drawable/cuadro_redondo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle">
+
+        <TextView
+            android:id="@+id/tvSecondTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Agregar tus gastos aquí"
+            android:textColor="@color/principalColor"
+            android:textSize="22sp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/tvNombreGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSecondTitle"
+            android:layout_marginTop="10dp"
+            android:text="Nombre Gasto"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/etNombreGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNombreGasto"
+            android:hint="Ej. Transporte"
+            android:textColorHint="@color/colorHint"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tvCantidadGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etNombreGasto"
+            android:layout_marginTop="20dp"
+            android:text="Cantidad Gasto"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/etGasto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCantidadGasto"
+            android:hint="Ej. 100"
+            android:textColorHint="@color/colorHint"
+            android:background="@drawable/border"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/bAgregar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etGasto"
+            android:layout_marginTop="20dp"
+            android:text="Agregar Gasto"
+            android:background="@drawable/button"/>
+
+        <TextView
+            android:id="@+id/tvListado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/bAgregar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Listado"
+            android:textColor="@color/principalColor"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvPresupuesto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvListado"
+            android:text="Presupuesto: $ 5000"
+            android:textColor="#004085"
+            android:background="#cce5ff"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvRestante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPresupuesto"
+            android:text="Restante: $ 4000"
+            android:textColor="#155724"
+            android:background="#d4edda"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"/>
+
+        <View
+            android:id="@+id/vLine"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@id/tvRestante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"/>
+
+        <ListView
+            android:id="@+id/lvTablero"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vLine" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
